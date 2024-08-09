@@ -40,9 +40,29 @@ void test01(){
     }
 }
 
+//存放自定义数据类型 指针
+void test02(){
+    vector<Person*> v;
+
+    Person p1("Bell", 17);
+    Person p2("Chalie", 15);
+    Person p3("Bery", 999);
+
+    //向容器中添加数据
+    v.push_back(&p1);
+    v.push_back(&p2);
+    v.push_back(&p3);
+
+    //遍历容器
+    for(vector<Person*>::iterator it = v.begin(); it != v.end(); it++){
+        cout<<"Name: "<<(*it)->getName()<<" Age: "<<(*it)->getAge()<<endl;
+    }
+}
+
 int main(){
 
-    test01();
+    //test01();
+    test02();
 
     return 0;
 }
