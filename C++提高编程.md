@@ -753,11 +753,29 @@ STL中最常用的容器为Vector，可以理解为数组。
 
 
 
-2.5.1 vector存放内置数据类型
+##### 2.5.1 vector存放内置数据类型
 
 容器：`vector`
 
 算法：`for_each`
 
 迭代器：`vector<int>::interator`
+
+
+
+##### 2.5.2 vector存放自定义数据类型
+
+学习目标：vector中存放自定义数据类型，并打印输出
+
+> [!NOTE]
+>
+> (*it).getName()    it->getName()
+
+
+
+2.5.3 Vector容器嵌套容器
+
+学习目标：容器中嵌套容器，我们将所有数据进行遍历输出
+
+
 
