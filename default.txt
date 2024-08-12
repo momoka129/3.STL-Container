@@ -4,7 +4,6 @@ using namespace std;
 
 void printDeque(const deque<int> &d){
     for(deque<int>::const_iterator it = d.begin(); it != d.end(); it++){
-        //*it = 100;        //限制为只读
         cout<<*it<<" ";
     }
     cout<<endl;
