@@ -102,8 +102,15 @@ int main(){
     showPlayerInfo(v);
 
     //find the winner
-    sort(v.begin(), v.end());
-    cout<<"The winner is "<<v.back().getName()<<" with a score of "<<v.back().getScore()<<endl;
+    double max = v.front().getScore();
+    string winner;
+    for(vector<Player>::iterator it = v.begin(); it != v.end(); it++){
+        if(it->getScore() > max){
+            max = it->getScore();
+            winner = it->getName();
+        }   
+    }
+    cout<<"The winner is "<<winner<<" with a score of "<<max<<endl;
     
     return 0;
 }
