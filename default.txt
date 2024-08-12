@@ -1,20 +1,31 @@
 #include<iostream>
-#include<vector>
 using namespace std;
+#include<deque>
 
-void printVector(vector<int> &v){
-    for(vector<int>::iterator it = v.begin(); it < v.end(); it++){
+void printDeque(const deque<int> &d){
+    for(deque<int>::const_iterator it = d.begin(); it != d.end(); it++){
+        //*it = 100;        //限制为只读
         cout<<*it<<" ";
     }
     cout<<endl;
 }
 
 void test01(){
-    vector<int> v1;
+    deque<int> d1;
     for(int i = 0; i < 10; i++){
-        v1.push_back(i);
+        d1.push_back(i);
     }
-    printVector(v1);
+
+    printDeque(d1);
+
+    deque<int> d2(d1.begin(), d1.end());
+    printDeque(d2);
+
+    deque<int> d3(10,100);
+    printDeque(d3);
+
+    deque<int> d4(d3);
+    printDeque(d4);
 }
 
 int main(){
