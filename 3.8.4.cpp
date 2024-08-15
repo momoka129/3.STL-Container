@@ -21,6 +21,7 @@ void test01(){
     s1.insert(10);
     s1.insert(10);
 
+
     printSet(s1);
 
     s1.erase(s1.begin());

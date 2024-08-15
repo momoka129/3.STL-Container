@@ -16,6 +16,7 @@ void printSet(set<int, myCompare> &s){
     cout<<endl;
 }
 
+
 void test01(){
 
     //before insert
